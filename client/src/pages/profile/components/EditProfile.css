@@ -1,39 +1,40 @@
-.auth-form-div {
-  position: relative;
-  overflow: hidden;
-  padding: 1rem;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
-  border-radius: 6px;
-  margin-bottom: 5%;
-  width: 95%;
-  max-width: 30rem;
-  background-color:#FF9972;
-  z-index: 1; /* Add this line */
-}
-
-.auth-form-wrapper {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
+.edit-form-div {
+    border: 1px solid #6F1D1B;
+    position: relative;
+    overflow: hidden;
+    padding: 1rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+    border-radius: 6px;
+    margin-bottom: 5%;
+    width: 95%;
+    max-width: 30rem;
+    background-color:#FF9972;
+    z-index: 1; 
+  }
+  .edit-form-wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
   
-  .auth-form .form-group {
-    margin-top: 1rem;
+  .edit-form .form-group {
     margin-bottom: 1rem;
   }
   .form-group{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
   }
   
-  .auth-form .form-group label {
-    text-align: center;
-    margin: auto 0;
+  .avatar-image-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
   
-  .auth-form .form-group input {
+  .edit-form .form-group input {
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.5;
@@ -44,23 +45,15 @@
     height: 35px;
   }
   
-  .auth-form .form-group input:focus {
+  .edit-form .form-group input:focus {
     color: #495057;
     background-color: #fff;
     border-color: #80bdff;
     outline: 0;
     box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
   }
-   .avatar-image__closeBtn{
-    width: 2rem !important ;
-    margin-left: 90%;
-  }
-  .avatar-image__addBtn{
-    width: 10rem !important;
-     margin-left: 45%;
-  }
   
-  .auth-form button {
+  .edit-form button {
     display: block;
     width: 100%;
     font-size: 1rem;
@@ -73,19 +66,21 @@
     cursor: pointer;
   }
   
-  .auth-form button:hover {
+  .edit-form button:hover {
     color: #fff;
-    background-color: #2C0C0B;
-    border-color: #2C0C0B;
+    background-color: #6F1D1B;
+    border-color: #6F1D1B;
   }
   
-  .auth-form button:focus {
+  .edit-form button:focus {
     color: #fff;
-    background-color: #2C0C0B;
-    border-color: #2C0C0B;
+    background-color: #6F1D1B;
+    border-color: #6F1D1B;
     outline: 0;
     box-shadow: 0 0 0 0.2rem rgba(44, 12, 11, 1);
   }
+
+  
   .image-upload.center {
     display: flex;
     justify-content: center;
@@ -114,7 +109,22 @@
     object-fit: cover;
   }
 
-  .switchForm {
+  .avatar-image__closeBtn{
+    width: 2rem !important ;
+    margin-left: 90%;
+  }
+  .avatar-image__addBtn{
+    width: 10rem !important;
+     margin-left: 45%;
+     margin-top: 10px;
+  }
+
+  .avatar-image__preview{
+    height: 200px;
+    width: 300px; 
+  }
+
+  .saveBtn {
     
     display: block;
     width: 100%;
@@ -126,9 +136,8 @@
     border-color: #2274A5;
     border-radius: 0.25rem;
     cursor: pointer;
-    margin-top: 5%;
+    margin-bottom: 5%;
   }
-
   .switchForm:hover{
     background-color: #144663;
     border-color: #144663;

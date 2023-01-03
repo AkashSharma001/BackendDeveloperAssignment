@@ -20,7 +20,7 @@ export const useAuth = () => {
       JSON.stringify({
         userId: uid,
         token: token,
-        expriation: tokenExpirationDate.toISOString(),
+        expiration: tokenExpirationDate.toISOString(),
       })
     );
   }, []);
@@ -31,26 +31,26 @@ export const useAuth = () => {
     localStorage.removeItem("userData");
   }, []);
 
-  //   useEffect(() => {
-  //     if (token && tokenExpirationDate) {
-  //       const remainingTime =
-  //         tokenExpirationDate.getTime() - new Date().getTime();
-  //       logoutTimer = setTimeout(logout, remainingTime);
-  //     } else {
-  //       clearTimeout(logoutTimer);
-  //     }
-  //   }, [token, logout, tokenExpirationDate]);
+  useEffect(() => {
+    if (token && tokenExpirationDate) {
+      const remainingTime =
+        tokenExpirationDate.getTime() - new Date().getTime();
+      logoutTimer = setTimeout(logout, remainingTime);
+    } else {
+      clearTimeout(logoutTimer);
+    }
+  }, [token, logout, tokenExpirationDate]);
 
-  //   useEffect(() => {
-  //     const storeData = JSON.parse(localStorage.getItem("userData"));
-  //     if (
-  //       storeData &&
-  //       storeData.token &&
-  //       new Date(storeData.expriation) > new Date()
-  //     ) {
-  //       login(storeData.userId, storeData.token, new Date(storeData.expriation));
-  //     }
-  //   }, [login]);
+  useEffect(() => {
+    const storeData = JSON.parse(localStorage.getItem("userData"));
+    if (
+      storeData &&
+      storeData.token &&
+      new Date(storeData.expiration) > new Date()
+    ) {
+      login(storeData.userId, storeData.token, new Date(storeData.expiration));
+    }
+  }, [login]);
 
   return { token, login, logout, userId };
 };

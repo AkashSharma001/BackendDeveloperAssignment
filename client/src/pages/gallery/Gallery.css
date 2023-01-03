@@ -1,0 +1,9 @@
+.gallery-image-grid__container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 300px));
+    grid-gap: 10px;
+    justify-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+  

@@ -1,0 +1,28 @@
+.profileDetails-container {
+   position: relative;
+  overflow: hidden;
+  padding: 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+  border-radius: 6px;
+  margin-bottom: 5%;
+  width: 95%;
+  max-width: 30rem;
+  background-color:#FF9972;
+  border: 1px solid #6F1D1B;
+
+  z-index: 1; /* Add this line */
+  }
+  .profileDetails-wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .profileDetails{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  

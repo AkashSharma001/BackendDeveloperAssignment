@@ -1,0 +1,28 @@
+
+.image-grid__container  {
+    display: flex;
+    flex-direction: column;
+    border: 3px solid #6F1D1B;
+    border-radius: 5px;
+}
+.image-grid__container img {
+    height: 200px;
+    width: 300px;
+    object-fit: cover;
+    margin: 5px;
+  }
+  .image-grid__container label{
+    text-align: center;
+  }
+
+  .image-grid{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .image-grid button{
+    background-color :#e71d36;
+    border-color: #e71d36;
+    cursor: pointer;
+  }

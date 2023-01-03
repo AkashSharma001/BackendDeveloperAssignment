@@ -1,0 +1,95 @@
+.search-form{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.search-form input{
+    border-color: #FFEBB7;
+    margin-right: 5px;
+    background-color: #FFEBB7;
+}
+
+.search-form .searchBtn{
+    background-color: #FF6E31;
+    border-color: #FF6E31;
+    cursor: pointer;
+}
+
+.add-image__Btn{
+    
+    margin-left: 10px;
+    background-color: #2274A5;
+    border-color: #2274A5;
+    cursor: pointer;
+}
+
+  .image-upload-grid__container {
+    display: flex;
+    grid-gap: 10px;
+    justify-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .image-upload-grid{
+    display: flex;
+    flex-direction: column;
+    border: 3px solid #6F1D1B;
+    border-radius: 5px;
+  }
+  .image-upload-grid img {
+    height: 200px;
+    width: 300px;
+    object-fit: cover;
+    margin: 5px;
+
+  }
+  .image-upload-grid label{
+    text-align: center;
+  }
+  
+  .preview-image {
+    position: relative;
+  }
+  
+  .preview-image button {
+    position: absolute;
+    top: -14px;
+    right: -16px;
+    width: 30px;
+    background: none;
+    border: none;
+    color: red;
+    font-size: 1.5em;
+    cursor: pointer;
+  }
+  .preview-image label{
+    text-align: center;
+  }
+
+  .image-upload__action{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  .image-upload__action button{
+    
+    width: 10rem;
+    margin: 20px;
+    cursor: pointer;
+  }
+
+  .image-upload__action .uploadBtn{
+    background-color: #2274A5;
+    border-color: #2274A5;
+  }
+
+  .image-upload__action .deleteBtn{
+    
+    background-color: #e71d36;
+    border-color: #e71d36
+  }
